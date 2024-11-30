@@ -1,14 +1,12 @@
-import { getPermalink } from './utils/permalinks';
-
 export const headerData = {
   links: [
     {
       text: 'About',
-      href: getPermalink('/about'),
+      href: '/about',
     },
     {
       text: 'Team',
-      href: getPermalink('/team'),
+      href: '/team',
     },
     {
       text: 'GR-96',
@@ -29,7 +27,7 @@ export const headerData = {
     },
     {
       text: 'Contact',
-      href: getPermalink('/contact'),
+      href: '/contact',
     },
   ],
   actions: [{ text: 'Preorder', href: 'https://store.zeroturfmachines.com/gr96-preorder', target: '_blank' }],
@@ -55,8 +53,8 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Terms', href: '/terms' },
+    { text: 'Privacy Policy', href: '/privacy' },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@zeroturfmachines' },

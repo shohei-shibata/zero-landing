@@ -104,6 +104,7 @@ export const getAsset = (path: string): string =>
 const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink);
 
 /** */
+/*
 export const applyGetPermalinks = (menu: object = {}) => {
   if (Array.isArray(menu)) {
     return menu.map((item) => applyGetPermalinks(item));
@@ -131,4 +132,4 @@ export const applyGetPermalinks = (menu: object = {}) => {
     return obj;
   }
   return menu;
-};
+};*/
