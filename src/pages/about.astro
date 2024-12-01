@@ -2,6 +2,7 @@
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -52,29 +53,57 @@ const metadata = {
     ]}
   />
 
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Our Engineers',
+        href: '/team',
+        icon: 'tabler:users-group',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Meet Our Team
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Learn about the engineers who designed and developed the GR-96.
+    </Fragment>
+  </CallToAction>
+
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We want to hear from you"
-    tagline="Contact us"
-    columns={2}
+    title="We are here to help!"
     items={[
       {
-        title: 'Send us a message',
-        description:
-          'Use the <a class="hover:underline" href="/contact">contact form</a> to send us a message. We\'ll get back to you as quickly as we can.',
-        icon: 'tabler:messages',
+        title: 'General inquiries',
+        description: `W're eager to tell you more about our product and all of its features!`,
       },
       {
-        title: 'Email us',
+        title: 'Contact sales',
         description:
-          'Prefer to send us an email? Reach us at <a <a class="hover:underline" href="mailto:sales@zeroturfmachines.com">sales@zeroturfmachines.com</a>.',
-        icon: 'tabler:at',
+          'Talk to us about becoming a dealer or purchasing for your own business.',
       },
       {
-        title: 'Visit us',
+        title: 'Technical support',
         description:
-          'We are located 30 minutes outside of Cincinnati. Get directions <a class="hover:underline" target="_blank" href="https://maps.app.goo.gl/sanW1sTkLm91nNXC6">here</a>.',
+          `We're happy to help you through any technical issues you are having.`,
+      },
+      {
+        title: 'Phone',
+        description: '+1 (513) 609-9953',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: '<a class="hover:underline" href="mailto:sales@zeroturfmachines.com">sales@zeroturfmachines.com</a>',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description: '<a class="hover:underline" target="_blank" href="https://maps.app.goo.gl/QuY5P8ZhSRU59Fbt7">789 US Route 50, Milford Ohio 45150</a>',
         icon: 'tabler:map-pin',
       },
     ]}
