@@ -1,0 +1,61 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import TeamGrid from '~/components/widgets/TeamGrid.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import type { Employee } from '~/types';
+
+const metadata = {
+  title: 'Team',
+};
+
+const employees: Employee[] = [
+  {
+    name: 'Jude Hueber',
+    title: 'Principal Engineer and Owner',
+    bio: "<p>Jude Hueber graduated from Colorado State University in 2006 with a B.S. in mechanical engineering. In college he became interested in robotics, and his first job was designing remotely operated equipment for Nuclear D&D projects. A lifelong automotive enthusiast, Jude jumped at an opportunity to lead the engineering team for a start-up company that was developing new drive-train technology for heavy trucks. This started his career in automotive and ultimately led to the founding of JKV as an engineering consulting company for special automotive projects.  </p>",
+    image: '~/assets/images/portrait_jude.jpg',
+  },
+  {
+    name: 'Chris Pennekamp',
+    title: 'Senior Systems Engineer',
+    bio: "<p>Over the last 17 years, Chris has supervised or directly participated in the manufacturing of medical devices and automotive components using traditional methods such as CNC maching, EDM, advanced welding processes, injection molding, as well as cutting edge additive processes.</p><p>He has made enormous engineering contributions to automotive systems design and integration projects, as well as automotive performance and restoration projects.</p><p>He is also involved in control systems architecture and software implementation at JKV.</p>",
+    image: '~/assets/images/portrait_chris.jpg',
+  },
+  {
+    name: 'Ryan Kabbes',
+    title: 'Senior Mechanical Engineer',
+    bio: '<p>After 12 years with Honda R&D, Ryan joined JKV as a Senior Project Engineer. Ryan\'s 12 years at Honda provided him with a vast experience in the discipline of product development and "design for manufacturing" for primarily stamped steel and injection-molded Automotive plastic parts. However, since then, Ryan has made large engineering contributions during his time at JKV to entire Prototype Vehicle Chassis/Suspension/Steering/Braking systems design, amongst other stationary and fully automated structures and machines.</p>',
+    image: '~/assets/images/portrait_ryan.jpg',
+  },
+  {
+    name: 'Shohei Shibata',
+    title: 'Senior Mechanical Engineer',
+    bio: "<p>Shohei graduated with a B.S. in Mechanical Engineering from Purdue University in 2006. Since then, he has spent much of his career in the automotive industry, designing and developing safety critical chassis and suspension components for major OEMs. The experience has trained him well in the technical know-how of structural design, while at the same time he is a curious learner that is always learning something new. But at the end of the day, he believes that good communication and projection management are most critical to a project's success.</p>",
+    image: '~/assets/images/portrait_shohei.jpg',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Our Team"
+    image={{
+      src: '~/assets/images/team_photo.png',
+      alt: 'Team Photo',
+    }}
+  >
+    <Fragment slot="title">The engineers behind ZERO</Fragment>
+
+    <Fragment slot="subtitle">
+      From automotive to robotics to alternative energy and more... we come from varied backgrounds and with vast experiences. 
+    </Fragment>
+  </Hero>
+
+  <TeamGrid title="Meet Our Team" employees={employees}>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-zinc-50 dark:bg-transparent"></div>
+    </Fragment>
+  </TeamGrid>
+</Layout>

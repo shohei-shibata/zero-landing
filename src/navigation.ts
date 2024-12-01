@@ -60,6 +60,6 @@ export const footerData = {
     { ariaLabel: 'X', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@zeroturfmachines' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/JKVEngineering' },
   ],
-  footNote: `©️ 2024 ZERO Turf Machines. All rights Reserved.
+  footNote: `© 2024 ZERO Turf Machines. All rights Reserved.
   `,
 };
