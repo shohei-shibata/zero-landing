@@ -1,0 +1,17 @@
+---
+import Button from '../ui/Button.astro';
+---
+
+<form action="https://buttondown.com/api/emails/embed-subscribe/zeroturfmachines" method="post">
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email Address"
+    required
+    class="py-2 px-3 mt-2 block w-full text-sm rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-zinc-900"
+  />
+  <input type="hidden" value="1" name="embed" />
+  <div class="mt-3 grid">
+    <Button variant="secondary" type="submit" class="py-3"> Submit </Button>
+  </div>
+</form>
