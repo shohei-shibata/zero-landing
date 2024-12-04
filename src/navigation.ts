@@ -16,12 +16,8 @@ export const headerData = {
           href: '#features',
         },
         {
-          text: 'Manual',
-          href: 'https://docs.zeroturfmachines.com',
-        },
-        {
           text: 'Preorder',
-          href: 'https://store.zeroturfmachines.com/products/gr-96-pre-order',
+          href: '/preorder',
         },
       ],
     },
@@ -30,7 +26,7 @@ export const headerData = {
       href: '/contact',
     },
   ],
-  actions: [{ text: 'Preorder', href: 'https://store.zeroturfmachines.com/products/gr-96-pre-order', target: '_blank' }],
+  actions: [{ text: 'Preorder', href: '/preorder' }],
 };
 
 export const footerData = {
@@ -40,7 +36,7 @@ export const footerData = {
       links: [
         { text: 'Features', href: '#features' },
         { text: 'Docs', href: 'https://docs.zeroturfmachines.com' },
-        { text: 'Preorder', href: 'https://store.zeroturfmachines.com/products/gr-96-pre-order' },
+        { text: 'Preorder', href: '/preorder' },
       ],
     },
     {

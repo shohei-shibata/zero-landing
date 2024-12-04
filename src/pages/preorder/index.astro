@@ -1,0 +1,154 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import PreorderForm from '~/components/widgets/PreorderForm.astro';
+
+const metadata = {
+  title: 'Preorder',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero tagline="GR-96 Preorder">
+    <Fragment slot="title"> Ready to make the switch? </Fragment>
+
+    <Fragment slot="subtitle">
+      Place a reservation to ensure that you will have it ready in time for the 2025 season.
+    </Fragment>
+  </Hero>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="How to Place a Preorder"
+    items={[
+      {
+        title: 'Review the terms',
+        description: 'Go to the <a class="hover:underline" href="/preorder/terms">terms and conditions</a> page.',
+      },
+      {
+        title: 'Submit Preorder Form',
+        description:
+          'Submit the preorder form below. Then we will contact you and provide a method for placing your preorder payment.',
+      },
+      {
+        title: 'Preorder payment',
+        description:
+          'After payment, we will keep in touch with you on our progress. We may also contact you for feedback as we put our final touches to the production design.',
+      },
+      {
+        title: 'Complete purchase and delivery',
+        description: 'Prior to delivery, we will work with you to finalize the purchase terms.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Preorder Terms',
+        href: '/preorder/terms',
+        icon: 'tabler:contract',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      GR-96 Preorder Terms & Conditions
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Click the button to review the terms, then fill out the form below to request a preorder.
+    </Fragment>
+  </CallToAction>
+
+  <PreorderForm
+    id="form"
+    title="GR-96 Preorder Form"
+    subtitle="Fill out the form below, and we will reach back out to you to finalize the preorder."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name*',
+        required: true,
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email*',
+        required: true,
+      },
+      {
+        type: 'text',
+        name: 'business-name',
+        label: 'Name of your business',
+      },
+      {
+        type: 'string',
+        name: 'location',
+        label: 'Your location',
+      },
+      {
+        type: 'number',
+        name: 'quantity',
+        label: 'Planned purchase quantity',
+      },
+      {
+        type: 'string',
+        name: 'delivery-date',
+        label: 'Desired delivery date',
+      },
+    ]}
+    textarea={{
+      label: 'Additional Comments',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the <a class="hover:underline" href="/preorder/terms">preorder terms & conditions</a>.',
+    }}
+    button='Submit'
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="We are here to help!"
+    items={[
+      {
+        title: 'General inquiries',
+        description: `W're eager to tell you more about our product and all of its features!`,
+      },
+      {
+        title: 'Contact sales',
+        description: 'Talk to us about becoming a dealer or purchasing for your own business.',
+      },
+      {
+        title: 'Technical support',
+        description: `We're happy to help you through any technical issues you are having.`,
+      },
+      {
+        title: 'Phone',
+        description: '+1 (513) 609-9953',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description:
+          '<a class="hover:underline" href="mailto:sales@zeroturfmachines.com">sales@zeroturfmachines.com</a>',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description:
+          '<a class="hover:underline" target="_blank" href="https://maps.app.goo.gl/QuY5P8ZhSRU59Fbt7">789 US Route 50, Milford Ohio 45150</a>',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>
