@@ -13,7 +13,7 @@ export const headerData = {
       links: [
         {
           text: 'Features',
-          href: '#features',
+          href: '/#features',
         },
         {
           text: 'Preorder',
@@ -34,7 +34,7 @@ export const footerData = {
     {
       title: 'GR-96',
       links: [
-        { text: 'Features', href: '#features' },
+        { text: 'Features', href: '/#features' },
         { text: 'Docs', href: 'https://docs.zeroturfmachines.com' },
         { text: 'Preorder', href: '/preorder' },
       ],
