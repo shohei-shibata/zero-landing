@@ -1,0 +1,35 @@
+---
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Thanks!',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    title="Thanks!"
+  >
+    <Fragment slot="content">
+      <p>The form has been submitted successfully. We will reach out to you as quickly as we can.</p>
+    </Fragment>
+  </HeroText>
+  <CallToAction 
+    title="What else can we help with?"
+    actions={[
+      {
+        text: "Read the Manual",
+        href: "https:/docs.zeroturfmachines.com",
+        target: "_blank",
+        icon: "tabler:book"
+      },{
+        text: "Watch Videos",
+        href: "https://www.youtube.com/@zeroturfmachines",
+        target: "_blank",
+        icon: "tabler:brand-youtube"
+      }
+    ]}
+  />
+</Layout>
