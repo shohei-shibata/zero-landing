@@ -1,17 +1,22 @@
 ---
+import { YouTube } from 'astro-embed';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import FeaturesWithImage from '~/components/widgets/FeaturesWithImage.astro';
+import ImageGallery from '~/components/widgets/ImageGallery.astro';
+import { getCollection } from 'astro:content';
 
 const metadata = {
   title: 'ZERO Turf Machines',
   ignoreTitleTemplate: true,
 };
+
+const gallery = await getCollection('gallery')
 ---
 
 <Layout metadata={metadata}>
@@ -28,7 +33,6 @@ const metadata = {
       },
       { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/gr96-banner.png', alt: 'GR96'}}
   >
     <Fragment slot="title">
       Silent Electric Turf Machines
@@ -39,6 +43,11 @@ const metadata = {
     </Fragment>
   </Hero>
 
+  <YouTube 
+    class="mx-auto my-12" 
+    id='https://youtu.be/d0yk2lI1sL0'
+    params='controls=0&disablekb=1&rel=0'
+  />
 
   <!-- Stats Widget ****************** -->
 
@@ -52,11 +61,15 @@ const metadata = {
 
   <!-- Features Widget *************** -->
 
-  <Features
+  <FeaturesWithImage
     id="features"
     tagline="Features"
     title="Introducing The GR-96"
     subtitle="Industry's first all-electric, stand-behind, zero-turn fertilizer spreader."
+    image={{
+      src: '~/assets/images/gr96-banner.png',
+      alt: 'Team Photo',
+    }}
     items={[
       {
         title: 'Charge for Days',
@@ -170,6 +183,11 @@ const metadata = {
     }}
   />
 
+  <ImageGallery 
+    title='Photo Gallery'
+    images={gallery}
+  />
+
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
@@ -180,6 +198,12 @@ const metadata = {
         href: '/contact',
         icon: 'tabler:message',
       },
+      {
+        text: 'To YouTube',
+        href: 'https://www.youtube.com/@zeroturfmachines',
+        target: '_blank',
+        icon: 'tabler:brand-youtube',
+      },
     ]}
   >
     <Fragment slot="title">
@@ -187,7 +211,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Send us a message today and discuss how the GR-96 can help your operations.
+      Send us a message. Or you can check out videos on our <a href="" target="_blank">YouTube channel</a>.
     </Fragment>
   </CallToAction>
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import Hero from '~/components/widgets/Hero.astro';
 import TeamGrid from '~/components/widgets/TeamGrid.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import type { Employee } from '~/types';
 
@@ -41,10 +42,6 @@ const employees: Employee[] = [
 
   <Hero
     tagline="Our Team"
-    image={{
-      src: '~/assets/images/team_photo.png',
-      alt: 'Team Photo',
-    }}
   >
     <Fragment slot="title">The engineers behind ZERO</Fragment>
 
@@ -53,9 +50,28 @@ const employees: Employee[] = [
     </Fragment>
   </Hero>
 
-  <TeamGrid title="Meet Our Team" employees={employees}>
+  <TeamGrid employees={employees}>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-zinc-50 dark:bg-transparent"></div>
     </Fragment>
   </TeamGrid>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Talk to us',
+        href: '/contact',
+        icon: 'tabler:message',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Curious to learn more?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Send us a message today and discuss how the GR-96 can help your operations.
+    </Fragment>
+  </CallToAction>
 </Layout>

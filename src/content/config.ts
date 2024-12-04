@@ -63,6 +63,15 @@ const postCollection = defineCollection({
   }),
 });
 
+const galleryCollection = defineCollection({
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    image: image(),
+    imageAltText: z.string(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
+  gallery: galleryCollection,
 };

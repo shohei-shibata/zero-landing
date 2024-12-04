@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ImageComponent from '~/components/common/Image.astro';
+
+export interface Props {
+  image: CollectionEntry<'gallery'>;
+}
+
+const { image } = Astro.props;
+---
+
+<article
+  class="mb-6 mx-auto transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade max-w-md"
+>
+  <div class="relative aspect-square bg-gray-400 dark:bg-zinc-700 rounded shadow-lg mb-6">
+    {
+      image && (
+        <a href={`/images/${image.slug}`} target="_target">
+          <ImageComponent
+            src={image.data.image}
+            class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-zinc-700"
+            widths={[400, 900]}
+            width={400}
+            sizes="(max-width: 900px) 400px, 900px"
+            alt={image.data.imageAltText}
+            aspectRatio="16:9"
+            layout="cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      )
+    }
+  </div>
+</article>

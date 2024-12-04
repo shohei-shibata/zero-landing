@@ -1,7 +1,7 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import PreorderForm from '~/components/widgets/PreorderForm.astro';
@@ -24,26 +24,30 @@ const metadata = {
 
   <!-- Steps2 Widget ****************** -->
 
-  <Steps2
+  <Steps
     title="How to Place a Preorder"
     items={[
       {
         title: 'Review the terms',
         description: 'Go to the <a class="hover:underline" href="/preorder/terms">terms and conditions</a> page.',
+        icon: 'tabler:contract'
       },
       {
         title: 'Submit Preorder Form',
         description:
           'Submit the preorder form below. Then we will contact you and provide a method for placing your preorder payment.',
+        icon: 'tabler:forms'
       },
       {
         title: 'Preorder payment',
         description:
           'After payment, we will keep in touch with you on our progress. We may also contact you for feedback as we put our final touches to the production design.',
+        icon: 'tabler:currency-dollar'
       },
       {
         title: 'Complete purchase and delivery',
         description: 'Prior to delivery, we will work with you to finalize the purchase terms.',
+        icon: 'tabler:truck'
       },
     ]}
   />

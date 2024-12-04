@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
+import Image from '~/components/common/Image.astro';
+
+export async function getStaticPaths() {
+  const gallery = await getCollection('gallery');
+  console.log(gallery);
+  return gallery.map((item) => {
+    return {
+      params: {
+        slug: item.slug,
+      },
+      props: item.data,
+    };
+  });
+}
+
+const { image, imageAltText } = Astro.props;
+const frontmatter = {
+  title: "",
+};
+---
+
+<MarkdownLayout frontmatter={frontmatter}>
+  <Image src={image.src} alt={imageAltText} />
+</MarkdownLayout>
