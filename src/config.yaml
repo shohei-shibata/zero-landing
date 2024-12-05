@@ -1,6 +1,6 @@
 site:
   name: ZERO Turf Machines
-  site: 'https://jkvengineering.com'
+  site: 'https://zeroturfmachines.com'
   base: '/'
   trailingSlash: false
 
@@ -11,7 +11,7 @@ metadata:
   title:
     default: ZERO Turf Machines
     template: '%s | ZERO Turf Machines'
-  description: "Rapid Engineered Solutions With Automotive and Industrial Focus"
+  description: "All-Electric Turf Equipment that will revolutionalize your lawn care services"
   robots:
     index: true
     follow: true
