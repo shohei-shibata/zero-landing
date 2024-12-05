@@ -20,15 +20,7 @@ const {
   canonical = String(getCanonical(String(Astro.url.pathname))),
   robots = {},
   description,
-  openGraph = {
-    images: [
-      {
-        url: `https://zero-landing.netlify.app/images/og.jpg`,
-        width: '1910px',
-        height: '1000px',
-      }
-    ]
-  },
+  openGraph = {},
   twitter = {},
 } = Astro.props;
 
