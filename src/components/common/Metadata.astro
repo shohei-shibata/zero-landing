@@ -14,13 +14,21 @@ export interface Props extends MetaData {
   dontUseTitleTemplate?: boolean;
 }
 
+const siteUrl = Astro.url.origin;
+
 const {
   title,
   ignoreTitleTemplate = false,
   canonical = String(getCanonical(String(Astro.url.pathname))),
   robots = {},
   description,
-  openGraph = {},
+  openGraph = {
+    images: [
+      {
+        url: `${siteUrl}/images/og.jpg`
+      }
+    ]
+  },
   twitter = {},
 } = Astro.props;
 
