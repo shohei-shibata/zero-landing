@@ -14,8 +14,6 @@ export interface Props extends MetaData {
   dontUseTitleTemplate?: boolean;
 }
 
-const siteUrl = Astro.url.origin;
-
 const {
   title,
   ignoreTitleTemplate = false,
@@ -25,7 +23,9 @@ const {
   openGraph = {
     images: [
       {
-        url: `https://zero-landing.netlify.app/images/og.jpg`
+        url: `https://zero-landing.netlify.app/images/og.jpg`,
+        width: '1910px',
+        height: '1000px',
       }
     ]
   },
