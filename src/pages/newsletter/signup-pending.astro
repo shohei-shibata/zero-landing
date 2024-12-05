@@ -1,0 +1,36 @@
+---
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Newsletter Signup',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    title="Verification Email Sent"
+  >
+    <Fragment slot="content">
+      <p>Thanks for signing up to our newsletter!</p>
+      <p>We have sent you a verification email. Please click on the link within that email to finalize your subscription.</p>
+    </Fragment>
+  </HeroText>
+  <CallToAction 
+    title="Also check out:"
+    actions={[
+      {
+        text: "Read the Manual",
+        href: "https:/docs.zeroturfmachines.com",
+        target: "_blank",
+        icon: "tabler:book"
+      },{
+        text: "Watch Videos",
+        href: "https://www.youtube.com/@zeroturfmachines",
+        target: "_blank",
+        icon: "tabler:brand-youtube"
+      }
+    ]}
+  />
+</Layout>
