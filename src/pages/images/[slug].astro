@@ -5,7 +5,6 @@ import Image from '~/components/common/Image.astro';
 
 export async function getStaticPaths() {
   const gallery = await getCollection('gallery');
-  console.log(gallery);
   return gallery.map((item) => {
     return {
       params: {
