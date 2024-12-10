@@ -2,14 +2,19 @@ export const headerData = {
   links: [
     {
       text: 'About',
-      href: '/about',
+      links: [
+        {
+          text: 'Zero Turf Machines',
+          href: '/about',
+        },
+        {
+          text: 'The Team',
+          href: '/team',
+        },
+      ],
     },
     {
-      text: 'Team',
-      href: '/team',
-    },
-    {
-      text: 'GR-96',
+      text: 'GR96',
       links: [
         {
           text: 'Features',
@@ -32,7 +37,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'GR-96',
+      title: 'GR96',
       links: [
         { text: 'Features', href: '/#features' },
         { text: 'Preorder', href: '/preorder' },
