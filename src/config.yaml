@@ -1,6 +1,6 @@
 site:
   name: ZERO Turf Machines
-  site: 'https://zero-landing.netlify.app'
+  site: 'https://zeroturfmachines.com'
   base: '/'
   trailingSlash: false
 
