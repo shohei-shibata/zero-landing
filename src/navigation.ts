@@ -27,6 +27,10 @@ export const headerData = {
       ],
     },
     {
+      text: 'Blog',
+      href: '/posts',
+    },
+    {
       text: 'Contact',
       href: '/contact',
     },
@@ -49,6 +53,7 @@ export const footerData = {
       links: [
         { text: 'About', href: '/about' },
         { text: 'Team', href: '/team' },
+        { text: 'Blog', href: '/posts' },
         { text: 'Contact', href: '/contact' },
       ],
     },
