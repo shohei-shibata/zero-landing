@@ -1,7 +1,7 @@
 {
   "name": "zero-landing",
   "version": "1.0.0-beta.48",
-  "description": "Landing page for ZERO Turf Machines",
+  "description": "ZERO Turf Machines",
   "type": "module",
   "engines": {
     "node": "^18.17.1 || ^20.3.0 || >= 21.0.0"

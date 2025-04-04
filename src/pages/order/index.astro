@@ -1,82 +1,37 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import PreorderForm from '~/components/widgets/PreorderForm.astro';
+import OrderInquiryForm from '~/components/widgets/OrderInquiryForm.astro';
 
 const metadata = {
-  title: 'Preorder',
+  title: 'Order Inquiry',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero tagline="GR96 Preorder">
+  <Hero 
+  tagline="Ordering Your GR96"
+    image={{
+      src: '~/assets/images/brighter-3.png',
+      alt: 'GR96',
+      width: '500px',
+      height: '350px'
+    }}>
     <Fragment slot="title"> Ready to make the switch? </Fragment>
 
     <Fragment slot="subtitle">
-      Reserve now to ensure that you will have it ready in time for the 2025 season.
+      Manufacturing is underway. Order yours now!
     </Fragment>
   </Hero>
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps
-    title="How to Place a Preorder"
-    subtitle='Preorder costs $1,500, which will apply toward your purchase. If you change your mind, we will refund the full amount. Here is how you can place your preorder:'
-    items={[
-      {
-        title: 'Review the terms',
-        description: 'Go to the <a class="hover:underline" href="/preorder/terms">terms and conditions</a> page.',
-        icon: 'tabler:contract'
-      },
-      {
-        title: 'Submit Preorder Form',
-        description:
-          'Submit the preorder form below. Then we will contact you and provide a method for placing your preorder payment.',
-        icon: 'tabler:forms'
-      },
-      {
-        title: 'Preorder payment',
-        description:
-          'After payment, we will keep in touch with you on our progress. We may also contact you for feedback as we put our final touches to the production design.',
-        icon: 'tabler:currency-dollar'
-      },
-      {
-        title: 'Complete purchase and delivery',
-        description: 'Prior to delivery, we will work with you to finalize the purchase terms.',
-        icon: 'tabler:truck'
-      },
-    ]}
-  />
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Preorder Terms',
-        href: '/preorder/terms',
-        icon: 'tabler:contract',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      GR96 Preorder Terms & Conditions
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Click the button to review the terms, then fill out the form below to request a preorder.
-    </Fragment>
-  </CallToAction>
-
-  <PreorderForm
-    name="preorder-form"
+  <OrderInquiryForm
+    name="order-inquiry-form"
     id="form"
-    title="GR96 Preorder Form"
-    subtitle="Fill out the form below, and we will reach back out to you to finalize the preorder."
+    title="GR96 Order Inquiry Form"
+    subtitle="Simply fill out the form below, and we'll reach back out to you to get the process started."
     inputs={[
       {
         type: 'text',
@@ -89,6 +44,11 @@ const metadata = {
         name: 'email',
         label: 'Email*',
         required: true,
+      },
+      {
+        type: 'test',
+        name: 'phone',
+        label: 'Phone number',
       },
       {
         type: 'text',
@@ -116,7 +76,7 @@ const metadata = {
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the <a class="hover:underline" href="/preorder/terms">preorder terms & conditions</a>.',
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
     button='Submit'
   />

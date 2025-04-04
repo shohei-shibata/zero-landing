@@ -21,8 +21,8 @@ export const headerData = {
           href: '/#features',
         },
         {
-          text: 'Preorder',
-          href: '/preorder',
+          text: 'Order',
+          href: '/order',
         },
       ],
     },
@@ -35,7 +35,7 @@ export const headerData = {
       href: '/contact',
     },
   ],
-  actions: [{ text: 'Preorder', href: '/preorder' }],
+  actions: [{ text: 'Order', href: '/order' }],
 };
 
 export const footerData = {
@@ -44,7 +44,7 @@ export const footerData = {
       title: 'GR96',
       links: [
         { text: 'Features', href: '/#features' },
-        { text: 'Preorder', href: '/preorder' },
+        { text: 'Order', href: '/order' },
         { text: 'Manual (Coming Soon)', href: '#' },
       ],
     },
@@ -66,6 +66,6 @@ export const footerData = {
     { ariaLabel: 'X', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@zeroturfmachines' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/JKVEngineering' },
   ],
-  footNote: `© 2024 ZERO Turf Machines. All rights Reserved.
+  footNote: `© 2025 ZERO Turf Machines. All rights Reserved.
   `,
 };

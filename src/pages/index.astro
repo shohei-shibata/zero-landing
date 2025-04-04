@@ -3,7 +3,6 @@ import { YouTube } from 'astro-embed';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -26,8 +25,8 @@ const gallery = await getCollection('gallery')
     actions={[
       {
         variant: 'primary',
-        text: 'Preorder',
-        href: '/preorder',
+        text: 'Order',
+        href: '/order',
         icon: 'tabler:contract',
       },
       { text: 'Learn more', href: '#features' },
@@ -113,7 +112,7 @@ const gallery = await getCollection('gallery')
 
   <Content
     isReversed
-    tagline="Coming February 2025"
+    tagline="Order yours now!"
     title="Manufacturing is Underway"
     items={[
       {
@@ -146,41 +145,6 @@ const gallery = await getCollection('gallery')
       <div class="absolute inset-0 bg-zinc-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Once you get to know it, you're going to want one <br/>(or more)."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Get in touch with us</span>',
-        description:
-          "Ask us questions. Will it be up to the task? How much operating costs will you save? Learn about all the great features that we had no room to list on this website.",
-        icon: 'tabler:message',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Test it out</span>',
-        description:
-          "Let's schedule a demo. You might be surprised how far we're willing to travel to let you see the machine. Or we're happy to do a video call.",
-        icon: 'tabler:steering-wheel',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Place a reservation</span>',
-        description:
-          'Reservations are $1,500 per machine and fully refundable. It will reserve your spot in the manufacturing queue, ensuring that you will get yours in a timely fashion.',
-        icon: 'tabler:contract',
-      },
-      {
-        title: 'Receive it in February 2025!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/gr96-1.jpg',
-      alt: 'The GR96',
-    }}
-  />
 
   <ImageGallery 
     title='Photo Gallery'
