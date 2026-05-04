@@ -15,7 +15,9 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 
-const gallery = await getCollection('gallery')
+const gallery = (await getCollection('gallery')).sort(
+  (a, b) => a.data.order - b.data.order
+);
 ---
 
 <Layout metadata={metadata}>

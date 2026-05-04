@@ -70,6 +70,7 @@ const galleryCollection = defineCollection({
     title: z.string(),
     image: image(),
     imageAltText: z.string(),
+    order: z.number(),
   }),
 });
 
