@@ -25,11 +25,13 @@ const gallery = await getCollection('gallery')
     actions={[
       {
         variant: 'primary',
-        text: 'Order',
-        href: '/order',
+        text: 'Order Inquiry',
+        href: '/inquiry',
         icon: 'tabler:contract',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Ask Questions', 
+        href: '/contact',
+        icon: 'tabler:bubble-text',},
     ]}
   >
     <Fragment slot="title">
@@ -62,11 +64,11 @@ const gallery = await getCollection('gallery')
   <FeaturesWithImage
     id="features"
     tagline="Features"
-    title="Introducing The GR96"
-    subtitle="Industry's first all-electric, stand-behind, zero-turn fertilizer spreader."
+    title="Perfect Fit For Your Operation"
+    subtitle="Our revolutionary all-electric sprayer/spreader. Now available in two sizes."
     image={{
-      src: '~/assets/images/gr96-banner.png',
-      alt: 'GR96 on grass',
+      src: '~/assets/images/both-machines.png',
+      alt: 'Render of GRTS and GR96',
     }}
     items={[
       {
@@ -84,13 +86,13 @@ const gallery = await getCollection('gallery')
       {
         title: 'Smart',
         description:
-          'Features like tip over warning, low charge warning, and speed-adjusted spray make the GR96 safe and worry-free to operate.',
+          'Get the job done right every time with automated, speed-adjusted sprayer and spreader.',
         icon: 'tabler:bulb',
       },
       {
         title: 'Cost Savings',
         description:
-          "Think of how much you spend on fuel. GR96 will cost around $2 to fully recharge. How much will that save you?",
+          "Think of how much you spend on fuel. You can fully recharge our machine for less than a dollar.",
         icon: 'tabler:currency-dollar',
       },
       {
@@ -102,7 +104,7 @@ const gallery = await getCollection('gallery')
       {
         title: 'Made In USA',
         description:
-          'Engineered and built in Milford, Ohio just outside of Cincinnati.',
+          'Engineered and built in Milford, Ohio.',
         icon: 'tabler:building-factory-2',
       },
     ]}
@@ -118,17 +120,17 @@ const gallery = await getCollection('gallery')
       {
         title: 'Engineered by the best',
         description:
-          'Our team has decades of combined engineering experience in automotive and alternative energy fields. So you know that the GR96 is going to be reliable, and a joy to operate.',
+          'Our team has decades of combined engineering experience in automotive and alternative energy fields. So you know that the Zero is going to be reliable, and a joy to operate.',
       },
       {
-        title: 'Tested by local operators',
+        title: 'Tested in the real world',
         description:
-          'Thanks to a few local lawn care operators, we have logged countless hours of field application testing and have received a lot of feedback that we\'ve incorporated into our machine to make it the best it can be!'
+          'We perfect our products by working closely with our local lawn care service providers, gaining priceless real-world feedback.'
       },
       {
         title: 'Built in Ohio',
         description:
-          'Every part is being carefully put together by our team in Milford Ohio. Your purchase of a GR96 will also support many local fabricators.',
+          'Every part is carefully put together by our team in Milford Ohio. Your purchase of a Zero will also support many local fabricators.',
       },
     ]}
     image={{
@@ -138,7 +140,7 @@ const gallery = await getCollection('gallery')
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The time is finally here</h3>
-      After years of hard work, we are so excited to share this product with the world.
+      Limited quantity available for 2026 build. Order yours today!
     </Fragment>
 
     <Fragment slot="bg">

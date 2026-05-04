@@ -1,6 +1,10 @@
 export const headerData = {
   links: [
     {
+      text: 'Home',
+      href: '/',
+    },
+    {
       text: 'About',
       links: [
         {
@@ -13,19 +17,19 @@ export const headerData = {
         },
       ],
     },
-    {
-      text: 'GR96',
+    /*{
+      text: 'Products',
       links: [
         {
-          text: 'Features',
-          href: '/#features',
+          text: 'GR96',
+          href: '/gr96',
         },
         {
-          text: 'Order',
-          href: '/order',
+          text: 'GRTS',
+          href: '/grts',
         },
       ],
-    },
+    },*/
     {
       text: 'Blog',
       href: '/posts',
@@ -35,16 +39,16 @@ export const headerData = {
       href: '/contact',
     },
   ],
-  actions: [{ text: 'Order', href: '/order' }],
+  actions: [{ text: 'Inquiry', href: '/inquiry' }],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'GR96',
+      title: 'Products',
       links: [
         { text: 'Features', href: '/#features' },
-        { text: 'Order', href: '/order' },
+        { text: 'Inquiry', href: '/inquiry' },
         { text: 'Manual (Coming Soon)', href: '#' },
       ],
     },
@@ -63,9 +67,9 @@ export const footerData = {
     { text: 'Privacy Policy', href: '/privacy' },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@zeroturfmachines' },
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@zeroturfmachines' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/JKVEngineering' },
   ],
-  footNote: `© 2025 ZERO Turf Machines. All rights Reserved.
+  footNote: `© 2026 ZERO Turf Machines. All rights Reserved.
   `,
 };

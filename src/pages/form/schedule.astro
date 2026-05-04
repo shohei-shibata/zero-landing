@@ -4,7 +4,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Thanks!',
+  title: "Let's Talk",
 };
 ---
 
@@ -13,23 +13,19 @@ const metadata = {
     title="Thanks!"
   >
     <Fragment slot="content">
-      <p>The form has been submitted successfully. We will reach out to you as quickly as we can.</p>
+      <p>Your information has been submitted successfully.</p>
     </Fragment>
   </HeroText>
   <CallToAction 
-    title="What else can we help with?"
+    title="Schedule a call with us"
+    subtitle='Get answers to technical questions from our engineers. <br>Learn about pricing and the ordering process.'
     actions={[
       {
-        text: "Read the Manual",
-        href: "https:/docs.zeroturfmachines.com",
+        text: "Schedule a Call Now",
+        href: "https://calendar.app.google/Xn85unnCoM4hHzwU7",
         target: "_blank",
         icon: "tabler:book"
-      },{
-        text: "Watch Videos",
-        href: "https://www.youtube.com/@zeroturfmachines",
-        target: "_blank",
-        icon: "tabler:brand-youtube"
-      }
+      },
     ]}
   />
 </Layout>
